@@ -1,0 +1,10 @@
+.app{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.main{
+  display: flex;
+  justify-content: left;
+  flex-grow: 3;
+}

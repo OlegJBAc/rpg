@@ -1,0 +1,94 @@
+@import "../../functions";
+
+$base-font-size: vw(18px);
+
+.avatars-nav {
+  width: 25%;
+  padding: vh(20px) vw(20px);
+  font-size: $base-font-size;
+  box-shadow: inset 0 0 5px indigo;
+  h2{
+    margin: 0;
+  }
+  &__add-button{
+    background: white;
+    width: 90%;
+    cursor: pointer;
+  }
+  &__name{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-text{
+      margin-right: vw(10px);
+    }
+    &-edit{
+      display: flex;
+    }
+    input{
+      width: 50%;
+    }
+    button{
+      width: vw(30px);
+      height: vh(30px);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      background: rgba(255, 255, 255, 0);
+      cursor: pointer;
+      svg{
+        width: vw(20px);
+        height: vh(20px);
+      }
+    }
+  }
+}
+
+.params {
+  list-style: none;
+  padding-left: vw(10px);
+  line-height: 190%;
+  &__icon-plus {
+    width: 20px;
+    height: 20px;
+  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-param{
+      display: flex;
+      width: 30%;
+      div{
+        margin-right: vw(10px);
+      }
+    }
+    &-skill{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 35%;
+    }
+
+    button {
+      background: rgba(255, 255, 255, 0);
+      border: none;
+      cursor: pointer;
+    }
+  }
+  &__skills {
+    list-style: circle;
+  }
+  &__skill {
+
+  }
+}
+#params__content_base {
+  margin: vh(10px) 0;
+}
+#params__content_base-param {
+  width: 100%;
+}

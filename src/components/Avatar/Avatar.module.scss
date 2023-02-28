@@ -1,0 +1,113 @@
+@import "../../functions";
+
+$custom-indigo: #b087ff;
+$indigo-shadow: inset 0 0 5px $custom-indigo;
+$base-font-size: vw(18px);
+$avatar-width: vw(150px);
+$avatar-height: vh(150px);
+
+.avatars-settings {
+  width: 75%;
+  padding: 0 vw(20px) vh(20px) vw(20px);
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: $base-font-size;
+
+  &.weak {
+
+  }
+  &.middle {
+
+  }
+  &.strong {
+
+  }
+  &.very_strong {
+
+   }
+  &.legendary {
+
+  }
+}
+.ressurect-button {
+  padding: vh(10px) vw(20px);
+  border: 1px solid $custom-indigo;
+  color: $custom-indigo;
+  background: rgba(255, 255, 255, 0);
+  margin-top: vh(10px);
+  box-shadow: $indigo-shadow;
+  &:hover {
+    cursor: pointer;
+    background: rgb(149, 65, 251);
+    transition-duration: 0.3s;
+    color: papayawhip;
+  }
+}
+.avatar {
+  position: absolute;
+  top: 0;
+  left: calc(50% - $avatar-width / 2);
+  width: $avatar-width;
+  height: $avatar-height;
+  background: #af42fa;
+  border-radius: 50%;
+  transition-duration: 0.4s;
+  cursor: url(../../images/sword_icon.svg), auto;
+
+  &__wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  svg{
+    transform: rotate(90deg);
+    color: red;
+  }
+  &.weak {
+    background: aqua;
+    width: vw(80px);
+    height: vh(80px);
+  }
+  &.middle {
+    background: steelblue;
+    width: vw(120px);
+    height: vh(120px);
+  }
+  &.strong {
+    background: orange;
+    width: vw(160px);
+    height: vh(160px);
+  }
+  &.very__strong {
+    background: orangered;
+    width: vw(200px);
+    height: vh(200px);
+  }
+  &.legendary {
+    background: #f9d71d;
+    box-shadow: 0 0 50px yellow;
+    width: vw(300px);
+    height: vh(300px);
+  }
+}
+.base-dependent-params {
+  width: fit-content;
+  &__wrapper {
+    width: 100%;
+  }
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  line-height: 200%;
+  padding: vh(20px) vw(20px);
+  height: fit-content;
+  box-shadow: $indigo-shadow;
+
+}

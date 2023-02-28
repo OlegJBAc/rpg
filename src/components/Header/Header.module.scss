@@ -1,0 +1,11 @@
+.header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  flex-grow: 1;
+  img{
+    width: 250px;
+    height: 80px;
+  }
+}

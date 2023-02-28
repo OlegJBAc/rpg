@@ -1,0 +1,15 @@
+@function vw($px-vw, $base-vw: 1920px) {
+    @return ($px-vw * 100vw) / $base-vw
+}
+
+@function vh($px-vw, $base-vw: 1080px) {
+    @return ($px-vw * 100vh) / $base-vw
+}
+
+@function mobile_vw($px-vw, $base-vw: 390px) {
+    @return ($px-vw * 100vw) / $base-vw
+}
+
+@function mobile_vh($px-vw, $base-vw: 844px) {
+    @return ($px-vw * 100vh) / $base-vw
+}
