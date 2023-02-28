@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/RPG/static/css/main.ab6bbbbd.css",
+    "main.js": "/RPG/static/js/main.c51d1c8d.js",
+    "static/media/rpg_logo.webp": "/RPG/static/media/rpg_logo.a2b8c38421cf7f93a902.webp",
+    "static/media/pen_icon.svg": "/RPG/static/media/pen_icon.92539ae6e95dc0845546f0a6d1274930.svg",
+    "static/media/sword_icon.svg": "/RPG/static/media/sword_icon.b3461b93be6fda9a3055.svg",
+    "static/media/minus_icon_main.svg": "/RPG/static/media/minus_icon_main.7bf3fa99449512bb8792a840c38f534b.svg",
+    "static/media/minus_icon.svg": "/RPG/static/media/minus_icon.a2ccfa221848b31ec345c613c7ad2a7b.svg",
+    "static/media/plus_icon_main.svg": "/RPG/static/media/plus_icon_main.09738874075a759807eef5f195e60202.svg",
+    "index.html": "/RPG/index.html",
+    "static/media/plus_icon.svg": "/RPG/static/media/plus_icon.cb2b492dd83e006728d70a245ac38e91.svg",
+    "main.ab6bbbbd.css.map": "/RPG/static/css/main.ab6bbbbd.css.map",
+    "main.c51d1c8d.js.map": "/RPG/static/js/main.c51d1c8d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ab6bbbbd.css",
+    "static/js/main.c51d1c8d.js"
+  ]
+}
