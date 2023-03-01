@@ -57,7 +57,10 @@ const AvatarParams = () => {
 
             <ul className={styles.params}>
                 { baseParams.map( (param, index) => {
-                        return <AvatarParamsItem paramName={param} param={allAvatarBaseParams[param]} key={v4()}/>
+                        return <AvatarParamsItem paramName={param}
+                                                 param={allAvatarBaseParams[param]}
+                                                 key={v4()}
+                        />
                     })
                 }
             </ul>

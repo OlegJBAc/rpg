@@ -9,6 +9,7 @@ const Avatar = () => {
     let avatarSumPower = useAppSelector(getAvatarSumPower)
     let avatarLevel = useAppSelector(getAvatarLevel)
     const allAvatarBaseDependentParams = useAppSelector(getAllAvatarBaseDependentParams)
+
     const dispatch = useAppDispatch()
 
     const cx = cnBind.bind(styles)

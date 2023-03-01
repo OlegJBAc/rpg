@@ -54,7 +54,7 @@ const avatarSlice = createSlice({
             }
         },
 
-        changeAvatarParamsValue: (state: typeof initialState, action: PayloadAction<changeAvatarParamsValueAction>) => {
+        changeAvatarParamsValue: (state: initialStateType, action: PayloadAction<changeAvatarParamsValueAction>) => {
             const { paramName, requiredAction, } = action.payload
             let { count, } = action.payload
             let currentValue = state.avatarParams.baseParams[paramName].value
@@ -83,26 +83,29 @@ const avatarSlice = createSlice({
             } else console.error('requiredAction or current value error')
         },
 
-        changeDependentSkillValue: (state: any, action: PayloadAction<changeDependentSkillValueAction>) => {
+        changeDependentSkillValue: (state: initialStateType, action: PayloadAction<changeDependentSkillValueAction>) => {
             const {paramName, skillName, requiredAction,} = action.payload
             let {count} = action.payload
+            // @ts-ignore
             let requiredSkill = state.avatarParams.baseParams[paramName].dependentSkills[skillName]
             const currentParamValue = state.avatarParams.baseParams[paramName].value
 
             if (!count) count = 1
 
             if (requiredAction === 'increase') {
+                // @ts-ignore
                 if (requiredSkill + count <= currentParamValue) state.avatarParams.baseParams[paramName].dependentSkills[skillName] += count
                 setSumPower(state)
                 updateLocalStorageAvatarParams(state)
             } else if (requiredAction === 'decrease') {
+                // @ts-ignore
                 if (requiredSkill - count >= 0) state.avatarParams.baseParams[paramName].dependentSkills[skillName] -= count
                 setSumPower(state)
                 updateLocalStorageAvatarParams(state)
             } else console.error('requiredAction or current value error')
         },
 
-        getDamage: (state: typeof initialState, action: PayloadAction<changeBaseDependentParamsAction>) => {
+        getDamage: (state: initialStateType, action: PayloadAction<changeBaseDependentParamsAction>) => {
             let { count } = action.payload
             const currentStamina = state.avatarParams.baseDependentParams.stamina
             const currentStrength = state.avatarParams.baseParams.strength.value
@@ -124,7 +127,7 @@ const avatarSlice = createSlice({
             updateLocalStorageAvatarParams(state)
         },
 
-        changeName: (state: typeof initialState, action: PayloadAction<changeNameAction>) => {
+        changeName: (state: initialStateType, action: PayloadAction<changeNameAction>) => {
             state.avatarParams.name = action.payload.name
             updateLocalStorageAvatarParams(state)
         },

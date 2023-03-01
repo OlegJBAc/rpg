@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import styles from './AvatarParams.module.scss';
 import { v4 } from 'uuid'
 import { ReactComponent as PlusIcon } from '../../images/plus_icon.svg'
@@ -23,7 +23,7 @@ const AvatarParamsItem: React.FC<propsType> = ({ paramName, param }) => {
         dispatch(changeAvatarParamsValue({ paramName: paramName, requiredAction: requiredAction }))
     }
     const changeDependentSkillFunc = (requiredAction: 'increase' | 'decrease', skillName: skillNameType) => () => {
-        dispatch(changeDependentSkillValue({ paramName, skillName, requiredAction}))
+        dispatch(changeDependentSkillValue({ paramName, skillName, requiredAction }))
     }
     return (
         <li className={styles.params__item}>
