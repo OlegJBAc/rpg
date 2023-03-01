@@ -45,7 +45,6 @@ export const initializeAvatar = (state: initialStateType) => {
 
 }
 export const getAvatarLevel: getAvatarLevelFunc = (currentSumPower, currentQuantityParams) => {
-    debugger
     if(currentSumPower !== 0 && currentSumPower !== 0) return Math.round(currentSumPower / currentQuantityParams)
     else {
         console.error('some error with params for calculation avatar level')
