@@ -9,7 +9,6 @@ $avatar-height: vh(150px);
 .avatars-settings {
   width: 75%;
   padding: 0 vw(20px) vh(20px) vw(20px);
-  background: white;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -47,53 +46,57 @@ $avatar-height: vh(150px);
   }
 }
 .avatar {
-  position: absolute;
-  top: 0;
-  left: calc(50% - $avatar-width / 2);
-  width: $avatar-width;
-  height: $avatar-height;
-  background: #af42fa;
-  border-radius: 50%;
-  transition-duration: 0.4s;
-  cursor: url(../../images/sword_icon.svg), auto;
 
-  &__wrapper {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-  }
   svg{
-    transform: rotate(90deg);
-    color: red;
+    transition-duration: 1s;
   }
   &.weak {
-    background: aqua;
-    width: vw(80px);
-    height: vh(80px);
+    svg{
+      path{
+        fill: mediumpurple;
+      }
+      width: vw(80px);
+      height: vh(80px);
+    }
+
   }
   &.middle {
-    background: steelblue;
-    width: vw(120px);
-    height: vh(120px);
+    svg {
+      path{
+        fill: mediumpurple;
+      }
+      width: vw(120px);
+      height: vh(120px);
+    }
   }
   &.strong {
-    background: orange;
-    width: vw(160px);
-    height: vh(160px);
+    svg {
+      path{
+        fill: mediumpurple;
+      }
+      width: vw(160px);
+      height: vh(160px);
+    }
   }
   &.very__strong {
-    background: orangered;
-    width: vw(200px);
-    height: vh(200px);
+    svg {
+      path{
+        fill: mediumpurple;
+      }
+      width: vw(200px);
+      height: vh(200px);
+    }
   }
   &.legendary {
-    background: #f9d71d;
-    box-shadow: 0 0 50px yellow;
-    width: vw(300px);
-    height: vh(300px);
+    svg {
+      box-shadow: 0 0 50px indigo;
+      border-radius: 50%;
+      path{
+        fill: mediumpurple;
+      }
+      width: vw(300px);
+      height: vh(300px);
+    }
   }
 }
 .base-dependent-params {

@@ -16,3 +16,6 @@ export const getAllAvatarBaseParams = (state: rootStateType) => {
 export const getAllAvatarBaseDependentParams = (state: rootStateType) => {
     return state.avatarSliceReducer.avatarParams.baseDependentParams
 }
+export const getAppTheme = (state: rootStateType) => {
+    return state.appReducer.theme
+}

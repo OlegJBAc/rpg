@@ -6,20 +6,27 @@ import Avatar from "./components/Avatar/Avatar";
 import {avatarInitializing} from "./redux/reducers/avatar-slice";
 import {appDispatchType} from "./redux/store";
 import {connect} from "react-redux";
+import Layout from "./layout/layout";
+
 
 class App extends React.Component<propsType> {
+
   componentWillMount() {
       this.props.avatarInitializing()
   }
   render() {
       return (
-          <div className={styles.app}>
-              <Header/>
-              <div className={styles.main}>
-                  <AvatarParams/>
-                  <Avatar/>
+          <Layout>
+              <div className={styles.app}>
+                  <Header/>
+
+
+                  <div className={styles.main}>
+                      <AvatarParams/>
+                      <Avatar/>
+                  </div>
               </div>
-          </div>
+          </Layout>
       )
   }
 }

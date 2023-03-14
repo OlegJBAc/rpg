@@ -26,6 +26,7 @@ export const initializeAvatar = (state: initialStateType) => {
     let agilityValue = state.avatarParams.baseParams.agility.value
     let intelligenceValue = state.avatarParams.baseParams.intelligence.value
 
+
     baseDependentParamsNames.forEach(param => {
         quantityParams++
         if(param === 'stamina') stateBaseDependentParams[param] = strengthValue + 3

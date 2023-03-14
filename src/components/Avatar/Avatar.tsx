@@ -4,6 +4,12 @@ import {useAppDispatch, useAppSelector} from "../../hooks/hooks";
 import {getAllAvatarBaseDependentParams, getAvatarLevel, getAvatarSumPower} from "../../redux/selectors";
 import cnBind from 'classnames/bind'
 import {avatarInitializing, getDamage} from "../../redux/reducers/avatar-slice";
+import { ReactComponent as AvatarDeath } from '../../images/avatar/death.svg'
+import { ReactComponent as AvatarBeginner } from '../../images/avatar/beginner.svg'
+import { ReactComponent as AvatarStepSecond } from '../../images/avatar/step-second.svg'
+import { ReactComponent as AvatarStepThird } from '../../images/avatar/step-third.svg'
+import { ReactComponent as AvatarStepFourth } from '../../images/avatar/step-fourth.svg'
+import { ReactComponent as AvatarMaxPower } from '../../images/avatar/max-power.svg'
 
 const Avatar = () => {
     let avatarSumPower = useAppSelector(getAvatarSumPower)
@@ -16,6 +22,15 @@ const Avatar = () => {
 
     const getDamageFunc = (count=1) => () => {
         dispatch(getDamage({ count }))
+    }
+
+    const returnAvatar = () => {
+        if(avatarLevel === 0) return <AvatarDeath/>
+        if(avatarLevel === 1) return <AvatarBeginner/>
+        if(avatarLevel === 2) return <AvatarStepSecond/>
+        if(avatarLevel === 3) return <AvatarStepThird/>
+        if(avatarLevel === 4) return <AvatarStepFourth/>
+        if(avatarLevel === 5) return <AvatarMaxPower/>
     }
     return (
         <div className={cx('avatars-settings', {
@@ -30,13 +45,13 @@ const Avatar = () => {
                 <span>
                     Stamina: <b>{ allAvatarBaseDependentParams.stamina }</b>
                 </span>
-                <span>
+                    <span>
                     Evasion: <b>{ allAvatarBaseDependentParams.evasion }</b>
                 </span>
-                <span>
+                    <span>
                     Energy: <b>{ allAvatarBaseDependentParams.energy }</b>
                 </span>
-                <span>
+                    <span>
                     Level: <b>{ avatarLevel }</b>
                 </span>
                     <b>
@@ -63,7 +78,11 @@ const Avatar = () => {
                 })}
                      onClick={getDamageFunc()}
                      title={'Attack avatar'}
-                ></div>
+                >
+                    {
+                        returnAvatar()
+                    }
+                </div>
             </div>
 
         </div>

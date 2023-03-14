@@ -1,8 +1,10 @@
 import { configureStore, combineReducers } from "@reduxjs/toolkit"
 import avatarSliceReducer from './reducers/avatar-slice'
+import appReducer from './reducers/app-slice'
 
 
 const rootReducer = combineReducers({
+    appReducer,
     avatarSliceReducer,
 })
 

@@ -60,6 +60,8 @@ const avatarSlice = createSlice({
             let currentValue = state.avatarParams.baseParams[paramName].value
             const baseParamsWithDependency = ['strength', 'agility', 'intelligence']
 
+
+
             if (!count) count = 1
 
             if (requiredAction === 'increase') {
