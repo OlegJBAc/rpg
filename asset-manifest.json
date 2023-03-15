@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/rpg/static/css/main.cc3ffd87.css",
-    "main.js": "/rpg/static/js/main.3dfe20f9.js",
+    "main.css": "/rpg/static/css/main.20979194.css",
+    "main.js": "/rpg/static/js/main.affb0f57.js",
     "static/media/rpg_logo.svg": "/rpg/static/media/rpg_logo.a77549058a0cef00f89248c56f76a8ec.svg",
     "static/media/pen_icon.svg": "/rpg/static/media/pen_icon.92539ae6e95dc0845546f0a6d1274930.svg",
     "static/media/step-second.svg": "/rpg/static/media/step-second.90ed3a18c9f8ed5c916180c7eb0bddbe.svg",
+    "static/media/sword_icon.svg": "/rpg/static/media/sword_icon.f7b14dc6ff814ce5bb22.svg",
     "static/media/max-power.svg": "/rpg/static/media/max-power.484422d91b6054c5981c6b1b15f93990.svg",
     "static/media/minus_icon.svg": "/rpg/static/media/minus_icon.a2ccfa221848b31ec345c613c7ad2a7b.svg",
     "static/media/plus_icon_main.svg": "/rpg/static/media/plus_icon_main.09738874075a759807eef5f195e60202.svg",
@@ -15,11 +16,11 @@
     "static/media/beginner.svg": "/rpg/static/media/beginner.ad4d1f5b4dcafbeea3698d3419cd6723.svg",
     "static/media/minus_icon_main.svg": "/rpg/static/media/minus_icon_main.9f8c1a2795651cc10e31e3ac28a410c7.svg",
     "static/media/step-fourth.svg": "/rpg/static/media/step-fourth.700cf95a7e4b9055b4c2791a4527c4e3.svg",
-    "main.cc3ffd87.css.map": "/rpg/static/css/main.cc3ffd87.css.map",
-    "main.3dfe20f9.js.map": "/rpg/static/js/main.3dfe20f9.js.map"
+    "main.20979194.css.map": "/rpg/static/css/main.20979194.css.map",
+    "main.affb0f57.js.map": "/rpg/static/js/main.affb0f57.js.map"
   },
   "entrypoints": [
-    "static/css/main.cc3ffd87.css",
-    "static/js/main.3dfe20f9.js"
+    "static/css/main.20979194.css",
+    "static/js/main.affb0f57.js"
   ]
 }
