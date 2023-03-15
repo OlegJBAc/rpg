@@ -1,7 +1,9 @@
 import {initialStateType} from "../../types/avatarSliceTypes";
+import avatarParams from "../../components/AvatarParams/AvatarParams";
 
+export type initializeAvatarPropertyType ='ressurect' | 'death'
 
-export const initializeAvatar = (state: initialStateType) => {
+export const initializeAvatar = (state: initialStateType, type: initializeAvatarPropertyType='ressurect') => {
 
     const { baseParamsNames, baseParamsDependentSkills, baseDependentParamsNames } = state.initializationData
     const stateBaseParams = state.avatarParams.baseParams
@@ -26,12 +28,11 @@ export const initializeAvatar = (state: initialStateType) => {
     let agilityValue = state.avatarParams.baseParams.agility.value
     let intelligenceValue = state.avatarParams.baseParams.intelligence.value
 
-
     baseDependentParamsNames.forEach(param => {
         quantityParams++
-        if(param === 'stamina') stateBaseDependentParams[param] = strengthValue + 3
-        if(param === 'evasion') stateBaseDependentParams[param] = agilityValue + 10
-        if(param === 'energy') stateBaseDependentParams[param] = agilityValue + intelligenceValue
+        if(param === 'stamina') stateBaseDependentParams[param] = strengthValue + (type === 'ressurect' ? 3 : 0)
+        if(param === 'evasion') stateBaseDependentParams[param] = agilityValue + (type === 'ressurect' ? 10 : 0)
+        if(param === 'energy') stateBaseDependentParams[param] = agilityValue + (type === 'ressurect' ? intelligenceValue : 0)
     })
 
     let { stamina, evasion, energy } = state.avatarParams.baseDependentParams
@@ -40,7 +41,7 @@ export const initializeAvatar = (state: initialStateType) => {
     state.avatarParams.sumPower = stamina + evasion + energy
     state.avatarParams.name = 'Example'
 
-    state.avatarParams.avatarLevel = getAvatarLevel(state.avatarParams.sumPower, state.avatarParams.quantityParams)
+    state.avatarParams.avatarLevel =  getAvatarLevel(state.avatarParams.sumPower, state.avatarParams.quantityParams)
 
     updateLocalStorageAvatarParams(state)
 

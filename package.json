@@ -2,7 +2,7 @@
   "name": "rpg-test",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://olegjbac.github.io/RPG",
+  "homepage": "https://olegjbac.github.io/rpg",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.3",
     "@testing-library/jest-dom": "^5.16.5",

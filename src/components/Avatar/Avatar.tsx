@@ -70,7 +70,8 @@ const Avatar = () => {
 
             <div className={styles.avatar__wrapper}>
                 <div className={cx('avatar', {
-                    weak: avatarLevel <= 1,
+                    death: avatarLevel === 0,
+                    weak: avatarLevel === 1,
                     middle: avatarLevel === 2,
                     strong: avatarLevel === 3,
                     very__strong: avatarLevel === 4,
